@@ -18,19 +18,10 @@ export default class BottomTabNavigator extends Component {
             tabBarIcon: ({ focused, color, size }) => {
               let iconName;
 
-              if (route.name === "Transação") {
-                iconName = "book";
-              } else if (route.name === "Pesquisar") {
-                iconName = "search";
-              }
+              //Crie condicional para alternar aparência
 
-              // Você pode retornar qualquer componente que desejar aqui!
               return (
-                <Ionicons
-                  name={iconName}
-                  size={size}
-                  color={color}
-                />
+               // Retorne o ionicon
               );
             }
           })}
@@ -38,15 +29,15 @@ export default class BottomTabNavigator extends Component {
             activeTintColor: "#FFFFFF",
             inactiveTintColor: "black",
             style: {
-              height: 130,
-              borderTopWidth: 0,
-              backgroundColor: "#5653d4"
+              
             },
             labelStyle: {
-              fontSize: 20,
+             
             },
-            labelPosition: "beside-icon",
-           
+            labelPosition: " ",
+            tabStyle:{
+            
+            }           
           }}
         >
           <Tab.Screen name="Transação" component={TransactionScreen} />
